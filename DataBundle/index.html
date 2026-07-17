@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEE'S DATA DEALS - Buy Data Bundles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                   <img src="Deelogo.png.png" alt="Dee's Logo" class="dee-logo">
+                </div>
+                <div class="header-text">
+                    <h1>DEE'S DATA DEALS</h1>
+                    <p>Fast, Reliable, Affordable Data Bundles</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Section (Left Side) -->
+            <section class="form-section">
+                <div class="card form-card">
+                    <!-- ===== SECTION 1: PAYMENT FORM ===== -->
+                    <div id="paymentSection">
+                        <h2>Get Your Data Bundle</h2>
+                        
+                        <!-- Step 1: Network Selection -->
+                        <div class="form-group">
+                            <label for="network" class="step-label">Step 1: Select Network</label>
+                            <select id="network" class="input-field">
+                                <option value="">Choose a network...</option>
+                                <option value="MTN">MTN</option>
+                                <option value="AirtelTigo">AirtelTigo</option>
+                                <option value="Telecel">Telecel</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 2: Bundle Selection -->
+                        <div class="form-group">
+                            <label for="bundle" class="step-label">Step 2: Select Bundle</label>
+                            <select id="bundle" class="input-field" disabled>
+                                <option value="">Select a bundle...</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 3: Email Address -->
+                        <div class="form-group">
+                            <label for="email" class="step-label">Step 3: Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="input-field" 
+                                placeholder="Enter email address"
+                                required
+                            >
+                        </div>
+
+                        <!-- Selected Plan Summary -->
+                        <div id="plan-summary" class="plan-summary hidden">
+                            <h3>Selected Plan</h3>
+                            <div class="summary-item">
+                                <span>Network:</span>
+                                <span id="summary-network">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Bundle:</span>
+                                <span id="summary-bundle">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Amount:</span>
+                                <span id="summary-amount">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Payment Button -->
+                        <button id="pay-btn" class="btn btn-primary" disabled>
+                            Make Payment
+                        </button>
+                        <p class="validation-message hidden" id="validation-msg"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bundle Display Section (Right Side) -->
+            <section class="bundles-section">
+                <div class="card bundles-card">
+                    <div class="bundles-header">
+                        <img id="network-logo" src="" alt="Network Logo" class="network-logo hidden">
+                        <h2 id="bundles-title">Select a network to see bundles</h2>
+                    </div>
+                    <div id="bundles-container" class="bundles-grid">
+                        <!-- Bundles will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Affiliate Marketing Section -->
+        <section class="affiliate-section">
+            <div class="affiliate-card">
+                <div class="affiliate-icon">
+                    <img src="Affiliate.png" alt="WhatsApp" class="whatsapp-icon">
+                </div>
+                <h2> Learn Affiliate Marketing</h2>
+                <p>Want to earn money online? Start your affiliate journey with us today!</p>
+                <p class="affiliate-subtitle">Join our growing community of affiliate partners</p>
+                <a href="https://whatsapp.com/channel/0029VbBwispISTkPPvzLum1z" target="_blank" class="btn btn-affiliate">
+                    Join Now 
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://whatsapp.com/channel/0029VbC75Do4Crfr8PhXm41C" target="_blank" class="whatsapp-btn" title="Chat with us on WhatsApp">
+        <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-btn-img">
+    </a>
+
+    <!-- Paystack Script -->
+    <script src="config.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
